@@ -1,7 +1,6 @@
-package com.example.demo.repository;
+package com.example.demo.domain.repository;
 
-import com.example.demo.dto.MedicoDto;
-import com.example.demo.model.Medico;
+import com.example.demo.domain.model.Medico;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

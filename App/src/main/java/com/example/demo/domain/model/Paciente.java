@@ -1,9 +1,8 @@
-package com.example.demo.model;
+package com.example.demo.domain.model;
 
-import com.example.demo.dto.DadosAtualizacaoPaciente;
-import com.example.demo.dto.PacienteDto;
+import com.example.demo.domain.dto.DadosAtualizacaoPaciente;
+import com.example.demo.domain.dto.PacienteDto;
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
 import lombok.*;
 
 import java.util.UUID;

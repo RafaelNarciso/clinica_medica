@@ -1,8 +1,8 @@
-package com.example.demo.model;
+package com.example.demo.domain.model;
 
-import com.example.demo.dto.DadosAtualizacaoMedico;
-import com.example.demo.dto.MedicoDto;
-import com.example.demo.enumered.Especialidade;
+import com.example.demo.domain.dto.DadosAtualizacaoMedico;
+import com.example.demo.domain.dto.MedicoDto;
+import com.example.demo.domain.enumered.Especialidade;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.*;

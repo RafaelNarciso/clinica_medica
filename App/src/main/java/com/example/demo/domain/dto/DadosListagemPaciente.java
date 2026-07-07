@@ -1,6 +1,6 @@
-package com.example.demo.dto;
+package com.example.demo.domain.dto;
 
-import com.example.demo.model.Paciente;
+import com.example.demo.domain.model.Paciente;
 
 import java.util.UUID;
 

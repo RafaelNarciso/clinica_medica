@@ -1,11 +1,11 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.DadosAtualizacaoMedico;
-import com.example.demo.dto.DadosDetalhamentoMedico;
-import com.example.demo.dto.DadosListagemMedico;
-import com.example.demo.dto.MedicoDto;
-import com.example.demo.model.Medico;
-import com.example.demo.repository.MedicoRepository;
+import com.example.demo.domain.dto.DadosAtualizacaoMedico;
+import com.example.demo.domain.dto.DadosDetalhamentoMedico;
+import com.example.demo.domain.dto.DadosListagemMedico;
+import com.example.demo.domain.dto.MedicoDto;
+import com.example.demo.domain.model.Medico;
+import com.example.demo.domain.repository.MedicoRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.List;
 import java.util.UUID;
 
 @RestController

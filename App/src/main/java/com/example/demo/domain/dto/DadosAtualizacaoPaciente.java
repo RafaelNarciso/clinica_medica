@@ -1,7 +1,7 @@
-package com.example.demo.dto;
+package com.example.demo.domain.dto;
 
-import com.example.demo.model.Endereco;
-import com.example.demo.model.Telefone;
+import com.example.demo.domain.model.Endereco;
+import com.example.demo.domain.model.Telefone;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;

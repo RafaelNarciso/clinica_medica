@@ -1,11 +1,11 @@
 package com.example.demo.controller;
 
-import com.example.demo.dto.DadosAtualizacaoPaciente;
-import com.example.demo.dto.DadosDetalhamentoPaciente;
-import com.example.demo.dto.DadosListagemPaciente;
-import com.example.demo.dto.PacienteDto;
-import com.example.demo.model.Paciente;
-import com.example.demo.repository.PacienteRepository;
+import com.example.demo.domain.dto.DadosAtualizacaoPaciente;
+import com.example.demo.domain.dto.DadosDetalhamentoPaciente;
+import com.example.demo.domain.dto.DadosListagemPaciente;
+import com.example.demo.domain.dto.PacienteDto;
+import com.example.demo.domain.model.Paciente;
+import com.example.demo.domain.repository.PacienteRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
