@@ -1,8 +1,8 @@
-package com.example.demo.dto;
+package com.example.demo.domain.dto;
 
-import com.example.demo.model.Endereco;
-import com.example.demo.model.Paciente;
-import com.example.demo.model.Telefone;
+import com.example.demo.domain.model.Endereco;
+import com.example.demo.domain.model.Paciente;
+import com.example.demo.domain.model.Telefone;
 
 import java.util.UUID;
 

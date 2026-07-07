@@ -1,7 +1,7 @@
-package com.example.demo.dto;
+package com.example.demo.domain.dto;
 
-import com.example.demo.enumered.Especialidade;
-import com.example.demo.model.Medico;
+import com.example.demo.domain.enumered.Especialidade;
+import com.example.demo.domain.model.Medico;
 
 import java.util.UUID;
 
