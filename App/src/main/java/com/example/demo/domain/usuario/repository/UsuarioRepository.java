@@ -1,5 +1,6 @@
-package com.example.demo.domain.usuario;
+package com.example.demo.domain.usuario.repository;
 
+import com.example.demo.domain.usuario.model.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 
