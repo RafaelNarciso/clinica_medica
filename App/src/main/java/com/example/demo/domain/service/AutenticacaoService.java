@@ -1,4 +1,4 @@
-package com.example.demo.domain.usuario.service;
+package com.example.demo.domain.service;
 
 import com.example.demo.domain.usuario.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
