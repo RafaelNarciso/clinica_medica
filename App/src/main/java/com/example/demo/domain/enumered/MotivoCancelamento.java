@@ -1,0 +1,17 @@
+package com.example.demo.domain.enumered;
+
+public enum MotivoCancelamento {
+
+    PACIENTE_DESISTIU,
+    PACIENTE_NAO_COMPARECEU,
+    PACIENTE_SOLICITOU_REAGENDAMENTO,
+
+    MEDICO_CANCELOU,
+    MEDICO_INDISPONIVEL,
+    MEDICO_ATRASADO,
+
+    PROBLEMAS_NA_CLINICA,
+    ERRO_DE_AGENDAMENTO,
+    OUTRO;
+
+}
