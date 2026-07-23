@@ -6,6 +6,7 @@ import com.example.demo.domain.dto.DadosListagemPaciente;
 import com.example.demo.domain.dto.PacienteDto;
 import com.example.demo.domain.model.Paciente;
 import com.example.demo.domain.repository.PacienteRepository;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/v1/pacientes")
+@SecurityRequirement(name = "bearer-key")
 public class PacienteController {
 
     @Autowired

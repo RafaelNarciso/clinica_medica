@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -26,4 +27,9 @@ public interface MedicoRepository extends JpaRepository<Medico, UUID> {
        order by function('rand')
        """)
     List<Medico> escolherMedicoAleatorioLivreNaData(Especialidade especialidade, LocalDateTime data, Pageable pageable);
+
+    @Query("""
+        select m.ativo from Medico m where m.id = :id
+        """)
+    Boolean findAtivoById(@Param("id") UUID id);
 }
