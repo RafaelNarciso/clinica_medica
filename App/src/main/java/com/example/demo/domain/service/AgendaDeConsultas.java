@@ -8,12 +8,14 @@ import com.example.demo.domain.model.Medico;
 import com.example.demo.domain.repository.ConsultaRepository;
 import com.example.demo.domain.repository.MedicoRepository;
 import com.example.demo.domain.repository.PacienteRepository;
+import com.example.demo.domain.repository.ValidadorAgendamentoDeConsulta;
 import com.example.demo.infra.exception.ValidacaoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class AgendaDeConsultas {
@@ -27,6 +29,9 @@ public class AgendaDeConsultas {
     @Autowired
     private PacienteRepository pacienteRepository;
 
+    @Autowired
+    private List<ValidadorAgendamentoDeConsulta> validadores;
+
     public void agendar(DadosAgendamentoConsulta dados) {
         if (!pacienteRepository.existsById(dados.idPaciente())) {
             throw new ValidacaoException("Id do paciente não existe");
@@ -38,11 +43,17 @@ public class AgendaDeConsultas {
 
         var medico = escolherMedico(dados);
 
+        if (medico == null) {
+            throw new ValidacaoException("Não existe médico disponível nessa data");
+        }
+
         var paciente = pacienteRepository.getReferenceById(dados.idPaciente());
 
         var dataConsulta = LocalDateTime.of(dados.data(), dados.horario());
 
         var consulta = new Consulta(null, medico, paciente, dataConsulta,null);
+
+        validadores.forEach(validar -> validar.validar(dados));
 
         repository.save(consulta);
     }
